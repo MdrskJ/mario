@@ -15,7 +15,8 @@ def load_level(filename):
 
 def generate_level(level, all_sprites, tiles_group, player_group):
     new_player, x, y = None, None, None
-    for y in range(len(level)):
+    W, H = len(level[1]), len(level)
+    for y in range(H):
         for x in range(len(level[y])):
             if level[y][x] == '.':
                 Tile('empty', x, y, tiles_group, all_sprites)
@@ -25,7 +26,7 @@ def generate_level(level, all_sprites, tiles_group, player_group):
                 Tile('empty', x, y, tiles_group, all_sprites)
                 player_x, player_y = x, y
     new_player = Player(player_x, player_y, player_group, all_sprites)
-    return new_player, x, y, player_x, player_y
+    return new_player, W, H, player_x, player_y
 
 
 def terminate():

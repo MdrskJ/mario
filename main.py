@@ -7,4 +7,3 @@ sc = pygame.display.set_mode(SIZE)
 start_screen(sc)
 
 pygame.quit()
-

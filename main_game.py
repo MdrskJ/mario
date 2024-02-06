@@ -14,10 +14,10 @@ def move_player(direction, player_x, player_y, field_map, level_x, level_y):
         if player_x < level_x - 1 and field_map[player_y][player_x + 1] != '#':
             new_x, new_y = new_x + 1, new_y
     if direction == 'up':
-        if player_x > 0 and field_map[player_y - 1][player_x] != '#':
+        if player_y > 0 and field_map[player_y - 1][player_x] != '#':
             new_x, new_y = new_x, new_y - 1
     if direction == 'down':
-        if player_x < level_y - 1 and field_map[player_y + 1][player_x] != '#':
+        if player_y < level_y - 1 and field_map[player_y + 1][player_x] != '#':
             new_x, new_y = new_x, new_y + 1
     field_map[new_y][new_x] = '@'
     print(new_x, new_y)

@@ -21,4 +21,3 @@ tile_images = {
     'empty': load_image('grass.png')
 }
 player_image = load_image('mar.png')
-
