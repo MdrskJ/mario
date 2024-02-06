@@ -5,7 +5,6 @@ from consts import FPS
 
 def move_player(direction, player_x, player_y, field_map, level_x, level_y):
     new_x, new_y = player_x, player_y
-    print(new_x, new_y)
     field_map[new_y][new_x] = '.'
     if direction == 'left':
         if player_x > 0 and field_map[player_y][player_x - 1] != '#':
@@ -20,7 +19,6 @@ def move_player(direction, player_x, player_y, field_map, level_x, level_y):
         if player_y < level_y - 1 and field_map[player_y + 1][player_x] != '#':
             new_x, new_y = new_x, new_y + 1
     field_map[new_y][new_x] = '@'
-    print(new_x, new_y)
     return new_x, new_y
 
 
